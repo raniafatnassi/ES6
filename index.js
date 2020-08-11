@@ -15,8 +15,6 @@ pets.filter((pet)=>{
     console.log(pet.type == "dog");
 })
 
-people.find(person=>{return person.name == name});
-
 let jasper;
 jasper = pets.find(pet=>{pet.name == 'Jasper'});
 console.log(`Jasper is ${jasper.age} years old`);
