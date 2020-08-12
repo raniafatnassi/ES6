@@ -7,14 +7,14 @@ var pets = [
 
 const getAge = pet => new Date().getFullYear() - pet.bornOn; 
 
-pets.filter((pet)=>{
-    console.log(pet.getAge(pet));
-})
+let petsWithAge = [];
+petsWithAge = pets.map(pet => getAge(pet));
+console.log(petsWithAge);
 
-pets.filter((pet)=>{
-    console.log(pet.type == "dog");
-})
+let dogs = [];
+dogs = pets.filter((pet)=>{return pet.type == "dog";})
+console.log(dogs);
 
 let jasper;
-jasper = pets.find(pet=>{pet.name == 'Jasper'});
-console.log(`Jasper is ${jasper.age} years old`);
+jasper = pets.find(pet=>{return pet.name == 'Jasper'});
+console.log(`Jasper is ${getAge(jasper)} years old`);
